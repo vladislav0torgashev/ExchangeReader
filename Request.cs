@@ -39,7 +39,7 @@ namespace WebDAV {
 		/// <returns>Results from the query.</returns>
 		private XmlDocument executeQuery(QueryElement queryElement) {
 			// Document to hold the query information.
-			XmlDocument queryDocument = new XmlDocument();
+			XmlDocument queryDocument = new XmlDocument(){ XmlResolver = null };
 
 			try {
 				queryDocument.LoadXml(queryElement.Xml);			
